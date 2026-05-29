@@ -659,16 +659,16 @@
     </div>
   </div>
 
-  <script>
+ <script>
     // Selected size tracking
-    let selectedSize = "6 inch";
-    let selectedPrice = "$28.00";
+    let selectedSize = "4 pcs";
+    let selectedPrice = "₹12.00";
 
     // Image gallery
     const images = [
-      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500&h=400&fit=crop&auto=format",
-      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=400&fit=crop&auto=format",
-      "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?w=500&h=400&fit=crop&auto=format"
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&h=400&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&h=400&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&h=400&fit=crop&auto=format"
     ];
 
     function changeImage(index) {
@@ -690,8 +690,8 @@
     function shareProduct() {
       if (navigator.share) {
         navigator.share({
-          title: "Fresh Fruit Cake",
-          text: "Check out this delicious Fresh Fruit Cake from She Who Bakes! 🎂",
+          title: "Red Velvet Brookies",
+          text: "Check out these delicious Red Velvet Brookies from She Who Bakes! 🍪",
           url: window.location.href
         }).catch(() => {});
       } else {
@@ -726,7 +726,7 @@
     // Order via WhatsApp
     function orderOnWhatsApp() {
       const qty = document.getElementById("qtyNum").textContent;
-      const cakeName = "Fresh Fruit Cake";
+      const cakeName = "Red Velvet Brookies";
       
       // Get selected add-ons
       const selectedAddons = [];
@@ -740,7 +740,7 @@
         ? "%0AAdd-ons:%0A" + selectedAddons.join("%0A") 
         : "";
       
-      const message = `✨ New Order! ✨%0A%0A🧁 Item: ${cakeName}%0A📏 Size: ${selectedSize}%0A💰 Price: ${selectedPrice}%0A🔢 Quantity: ${qty}${addonsText}%0A%0A🧁 From: She Who Bakes%0A%0APlease confirm my order! 🙏`;
+      const message = `✨ New Order! ✨%0A%0A🍪 Item: ${cakeName}%0A📦 Pack: ${selectedSize}%0A💰 Price: ${selectedPrice}%0A🔢 Quantity: ${qty}${addonsText}%0A%0A🧁 From: She Who Bakes%0A%0APlease confirm my order! 🙏`;
       
       // Replace this number with your WhatsApp business number (with country code, no + or spaces)
       const phoneNumber = "918762529770"; // <-- CHANGE THIS TO YOUR WHATSAPP NUMBER
