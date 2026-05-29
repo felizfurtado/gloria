@@ -676,60 +676,7 @@
         transform: scale(0.93);
       }
 
-      /* ── BOTTOM NAV ── */
-      .bottom-nav {
-        position: fixed;
-        bottom: 38px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 220px;
-        height: 66px;
-        background: white;
-        border-radius: 33px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 0 10px;
-        box-shadow:
-          0 10px 36px rgba(47, 26, 16, 0.15),
-          0 2px 8px rgba(0, 0, 0, 0.04);
-        z-index: 100;
-        animation: navGlow 3.5s ease-in-out infinite;
-        border: 1px solid rgba(246, 197, 74, 0.3);
-      }
-      @keyframes navGlow {
-        0%,
-        100% {
-          box-shadow:
-            0 10px 36px rgba(47, 26, 16, 0.12),
-            0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-        50% {
-          box-shadow:
-            0 12px 42px rgba(244, 168, 0, 0.22),
-            0 2px 12px rgba(0, 0, 0, 0.06);
-        }
-      }
-
-      .nav-item {
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 20px;
-        transition: transform 0.2s;
-        color: var(--light-text);
-      }
-      .nav-item:hover {
-        transform: scale(1.12);
-      }
-      .nav-item.active {
-        background: rgba(246, 197, 74, 0.18);
-        color: var(--chocolate);
-      }
+     
 
       @media (max-width: 420px) {
         .phone {
@@ -737,9 +684,7 @@
           border-radius: 0;
           width: 100vw;
         }
-        .bottom-nav {
-          bottom: 18px;
-        }
+       
       }
     </style>
   </head>
@@ -1279,18 +1224,7 @@
         </div>
       </div>
 
-      <!-- BOTTOM NAV -->
-      <div class="bottom-nav">
-        <div class="nav-item" onclick="setNav(this)" title="Favourites">
-          <i class="fas fa-heart"></i>
-        </div>
-        <div class="nav-item active" onclick="setNav(this)" title="Home">
-          <i class="fas fa-home"></i>
-        </div>
-        <div class="nav-item" onclick="setNav(this)" title="Orders">
-          <i class="fas fa-receipt"></i>
-        </div>
-      </div>
+
     </div>
 
     <script>
